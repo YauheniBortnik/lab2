@@ -21,7 +21,6 @@ class ReadyData implements AcquisitionData
         $this->films = json_decode(file_get_contents('cache/file.txt'), true);
         $this->result = $this->films['results'];
         return $this->result;
-        //print_r($this->result);
     }
 
     public function acquisitionGenres()
