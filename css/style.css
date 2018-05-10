@@ -1,0 +1,27 @@
+body {
+    background: url(light-veneer.png);
+    display: block;
+}
+
+#block-header{
+    width: 1500px;
+    height: auto;
+    margin: auto;
+    border: 1px solid black;
+}
+
+#abc{
+    max-width: 300px;
+}
+
+.headline{
+    text-align: center;
+}
+
+.btn{
+    width: 70px;
+}
+
+#main_table{
+    margin-top: 30px;
+}
