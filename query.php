@@ -13,7 +13,9 @@ if (isset($argv) == true || $_SERVER['REQUEST_METHOD'] == 'POST') {
                 unlink($document);
             }
         }
-        include "makingData.php";
+        include "classes/ReadyData.php";
+        $makingData = new ReadyData();
+        $filmArray = $makingData->GetFilmArray();
         for ($i = 0; $i < count($filmArray); $i++) {
             if (!file_exists("./images/img" . $i . ".jpg") == true) {
                 $pictures = file_get_contents('https://image.tmdb.org/t/p/w400' . $filmArray[$i]->poster);
