@@ -25,6 +25,7 @@ $count = count($filmArray);
         <td class="headline">Оригинальное название фильма</td>
         <td class="headline">Постер</td>
         <td class="headline" width="600px">Обзор</td>
+        <td class="headline">Продолжительность фильма</td>
         <td class="headline">Дата релиза</td>
         <td class="headline">Жанр</td>
     </tr>
@@ -40,6 +41,7 @@ $count = count($filmArray);
                 <td class="headline" bgcolor="#ff7f50"><?php echo $filmArray[$i]->origTitle; ?></td>
                 <td bgcolor="#a9a9a9"><img src='<?php echo "pictures/img$i.jpg"; ?>'></td>
                 <td bgcolor="#fffaf0" width="600px"><?php echo $filmArray[$i]->overview; ?></td>
+                <td class="headline" bgcolor="olive"><?php echo $filmArray[$i]->runTime; ?></td>
                 <td class="headline" bgcolor="#da70d6"><?php echo $filmArray[$i]->releaseDate; ?></td>
                 <td class="headline" bgcolor="yellow"><?php echo $filmArray[$i]->genre; ?></td></tr><?php
             }
@@ -52,6 +54,7 @@ $count = count($filmArray);
             <td class="headline" bgcolor="#ff7f50"><?php echo $filmArray[$i]->origTitle; ?></td>
             <td bgcolor="#a9a9a9"><img src='<?php echo "pictures/img$i.jpg"; ?>'></td>
             <td bgcolor="#fffaf0" width="600px"><?php echo $filmArray[$i]->overview; ?></td>
+            <td class="headline" bgcolor="olive"><?php echo $filmArray[$i]->runTime; ?></td>
             <td class="headline" bgcolor="#da70d6"><?php echo $filmArray[$i]->releaseDate; ?></td>
             <td class="headline" bgcolor="yellow"><?php echo $filmArray[$i]->genre; ?></td></tr><?php
         }

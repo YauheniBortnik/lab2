@@ -38,8 +38,9 @@ class ReadyData implements AcquisitionData
         $this->acquisitionFilms();
         $this->acquisitionGenres();
         for ($i = 0; $i < count($this->result); $i++) {
-            array_push($this->filmArray, new Films($this->result[$i]['id'], $this->result[$i]['title'], $this->result[$i]['original_title'], $this->result[$i]['poster_path'], $this->result[$i]['overview'], $this->result[$i]['release_date'], $this->result[$i]['genre_ids']));
+            array_push($this->filmArray, new Films($this->result[$i]['id'], $this->result[$i]['title'], $this->result[$i]['original_title'], $this->result[$i]['poster_path'], $this->result[$i]['overview'], $this->result[$i]['release_date'], $this->result[$i]['genre_ids'], $this->result[$i]['runtime']));
             $this->filmArray[$i]->setFilmGenre($this->result1);
+            $this->filmArray[$i]->getRunTime();
         }
         return $this->filmArray;
     }
